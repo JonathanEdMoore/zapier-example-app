@@ -3,7 +3,6 @@ const listRecipes = (z, bundle) => {
   const promise = z.request(
     'http://57b20fb546b57d1100a3c405.mockapi.io/api/recipes',
     {
-      // NEW CODE
       params: {
         style: bundle.inputData.style
       }
@@ -20,7 +19,6 @@ module.exports = {
     description: 'Trigger when a new recipe is added.'
   },
   operation: {
-    // NEW CODE
     inputFields: [{ key: 'style', type: 'string', required: false }],
     perform: listRecipes,
     sample: {
