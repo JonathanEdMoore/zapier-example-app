@@ -5,6 +5,7 @@ const addApiKeyToHeader = (request, z, bundle) => {
   return request
 }
 
+
 module.exports = {
   authentication: {
     type: 'custom',
@@ -20,7 +21,7 @@ module.exports = {
       })
     }
   },
-  
+
   beforeRequest: [
     addApiKeyToHeader
   ],
